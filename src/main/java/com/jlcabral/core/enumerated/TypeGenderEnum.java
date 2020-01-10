@@ -15,7 +15,7 @@ public enum TypeGenderEnum {
 	private Integer codigo;
 	private String descricao;
 
-	public TypeGenderEnum toEnum(Integer codigo) {
+	public static TypeGenderEnum toEnum(Integer codigo) {
 		if (ObjUtil.isNotEmpty(codigo)) {
 			for (TypeGenderEnum enumerated : TypeGenderEnum.values()) {
 				if (enumerated.getCodigo().equals(codigo)) {
@@ -23,7 +23,7 @@ public enum TypeGenderEnum {
 				}
 			}
 		}
-		throw new EnumInvalidException(codigo, this.getClass().getName());
+		throw new EnumInvalidException(codigo, TypeGenderEnum.class.getSimpleName());
 	}
 
 	public Integer getCodigo() {

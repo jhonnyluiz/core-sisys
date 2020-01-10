@@ -23,7 +23,7 @@ public enum TypeMessageExceptionEnum {
 				}
 			}
 		}
-		throw new EnumInvalidException(codigo, this.getClass().getName());
+		throw new EnumInvalidException(codigo, TypeMessageExceptionEnum.class.getSimpleName());
 	}
 
 	public Integer getCodigo() {

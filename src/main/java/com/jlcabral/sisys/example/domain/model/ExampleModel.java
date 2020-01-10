@@ -2,9 +2,17 @@ package com.jlcabral.sisys.example.domain.model;
 
 import com.jlcabral.core.enumerated.TypeGenderEnum;
 
-public class Example {
+public class ExampleModel {
 
 	private TypeGenderEnum genero;
+
+	public ExampleModel() {
+	}
+
+	public ExampleModel(TypeGenderEnum genero) {
+		super();
+		this.genero = genero;
+	}
 
 	public TypeGenderEnum getGenero() {
 		return genero;
