@@ -5,7 +5,7 @@ import com.jlcabral.core.util.ObjUtil;
 
 public enum TypeMessageExceptionEnum {
 
-	E(1, "Erro encontrado!"), A(2, "Atenção!"), I(3, "Informação!");
+	E(1, "Erro!"), A(2, "Atenção!"), I(3, "Informação!");
 
 	TypeMessageExceptionEnum(Integer codigo, String descricao) {
 		this.codigo = codigo;

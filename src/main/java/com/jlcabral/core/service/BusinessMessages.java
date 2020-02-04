@@ -9,7 +9,7 @@ import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Messages {
+public class BusinessMessages {
 
 	@Autowired
 	private MessageSource messageSource;
@@ -21,7 +21,7 @@ public class Messages {
 		accessor = new MessageSourceAccessor(messageSource);
 	}
 
-	public String get(String code, @Nullable Object... args) {
+	public String get(String code, @Nullable Object[] args) {
 		return accessor.getMessage(code, args);
 	}
 }

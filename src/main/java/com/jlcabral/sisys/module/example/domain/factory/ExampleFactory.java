@@ -1,10 +1,10 @@
-package com.jlcabral.sisys.example.domain.factory;
+package com.jlcabral.sisys.module.example.domain.factory;
 
 import java.util.Arrays;
 import java.util.List;
 
 import com.jlcabral.core.enumerated.TypeGenderEnum;
-import com.jlcabral.sisys.example.domain.model.ExampleModel;
+import com.jlcabral.sisys.module.example.domain.model.ExampleModel;
 
 public class ExampleFactory {
 
@@ -16,6 +16,6 @@ public class ExampleFactory {
 	}
 
 	public static ExampleModel mockExample() {
-		return new ExampleModel().setGenero(TypeGenderEnum.M);
+		return new ExampleModel(1L, "Name Example", 999, TypeGenderEnum.M);
 	}
 }

@@ -1,4 +1,4 @@
-package com.jlcabral.sisys.example.domain.factory;
+package com.jlcabral.core.factory;
 
 import static com.jlcabral.core.constant.Caracteres.ESPACO;
 import static com.jlcabral.core.constant.Caracteres.VAZIO;

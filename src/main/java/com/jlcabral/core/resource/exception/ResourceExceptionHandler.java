@@ -9,17 +9,18 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
 import com.jlcabral.core.exception.EnumInvalidException;
-import com.jlcabral.core.service.Messages;
+import com.jlcabral.core.service.BusinessMessages;
 
 @ControllerAdvice
 public class ResourceExceptionHandler {
 
 	@Autowired
-	private Messages messages;
+	private BusinessMessages messages;
 	
 	@ExceptionHandler(EnumInvalidException.class)
-	public ResponseEntity<ValidationError> objetoNaoEncontrado(EnumInvalidException e, HttpServletRequest request) {
-		ValidationError err = new ValidationError(messages.get(e.getCodeMessage(), e.getParametersMessage()), e.getCodeMessage());
+	public ResponseEntity<DevelopError> objetoNaoEncontrado(EnumInvalidException e, HttpServletRequest request) {
+		String msg = messages.get(e.getCodeMessage(), e.getParametersMessage());
+		DevelopError err = new DevelopError(msg, e.getCodeMessage());
 		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(err);
 	}
 	

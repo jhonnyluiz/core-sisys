@@ -1,4 +1,4 @@
-package com.jlcabral.sisys.example.domain.factory;
+package com.jlcabral.core.factory;
 
 public class FemaleNameFactory extends AbstractNameFactory {
 

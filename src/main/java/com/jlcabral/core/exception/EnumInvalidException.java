@@ -7,6 +7,10 @@ public class EnumInvalidException extends BusinessException {
 	private static final long serialVersionUID = 224221447922773090L;
 
 	public EnumInvalidException(Object codigo, String nameEnum) {
-		super(TypeMessageExceptionEnum.E, MsgConstant.MSG_001, null, codigo, nameEnum);
+		super();
+		String[] parametersMessage = { codigo.toString(), nameEnum };
+		setTypeMessage(TypeMessageExceptionEnum.E);
+		setCodeMessage(MsgConstant.MSG_902);
+		setParametersMessage(parametersMessage);
 	}
 }

@@ -19,7 +19,6 @@ public class MessageConfig implements WebMvcConfigurer {
 	public MessageSource messageSource() {
 		ReloadableResourceBundleMessageSource messageSource = new ReloadableResourceBundleMessageSource();
 		messageSource.setBasenames("classpath:messages/validation/message", "classpath:messages/business/message");
-		// messageSource.setDefaultEncoding("UTF-8");
 		messageSource.setUseCodeAsDefaultMessage(true);
 		return messageSource;
 	}

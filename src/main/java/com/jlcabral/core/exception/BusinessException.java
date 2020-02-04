@@ -2,6 +2,15 @@ package com.jlcabral.core.exception;
 
 import com.jlcabral.core.enumerated.TypeMessageExceptionEnum;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class BusinessException extends RuntimeException {
 	private static final long serialVersionUID = 7139506938542051826L;
 
@@ -10,44 +19,8 @@ public class BusinessException extends RuntimeException {
 	private String message;
 	private Object[] parametersMessage;
 
-	public BusinessException(TypeMessageExceptionEnum typeMessage, String codeMessage, String message,
-			Object... parametersMessage) {
-		this.message = message;
-		this.codeMessage = codeMessage;
-		this.typeMessage = typeMessage;
-		this.parametersMessage = parametersMessage;
+	public BusinessException(String codeMessage, Object[] parametersMessage) {
+		setCodeMessage(codeMessage);
+		setParametersMessage(parametersMessage);
 	}
-
-	public String getMessage() {
-		return message;
-	}
-
-	public void setMessage(String message) {
-		this.message = message;
-	}
-
-	public String getCodeMessage() {
-		return codeMessage;
-	}
-
-	public void setCodeMessage(String codeMessage) {
-		this.codeMessage = codeMessage;
-	}
-
-	public TypeMessageExceptionEnum getTypeMessage() {
-		return typeMessage;
-	}
-
-	public void setTypeMessage(TypeMessageExceptionEnum typeMessage) {
-		this.typeMessage = typeMessage;
-	}
-
-	public Object[] getParametersMessage() {
-		return parametersMessage;
-	}
-
-	public void setParametersMessage(Object[] parametersMessage) {
-		this.parametersMessage = parametersMessage;
-	}
-
 }
