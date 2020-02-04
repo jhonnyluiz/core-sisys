@@ -18,8 +18,9 @@ public class ExampleModel {
 		return genero;
 	}
 
-	public void setGenero(TypeGenderEnum genero) {
+	public ExampleModel setGenero(TypeGenderEnum genero) {
 		this.genero = genero;
+		return this;
 	}
 
 }

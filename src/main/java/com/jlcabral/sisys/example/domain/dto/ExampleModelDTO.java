@@ -1,4 +1,4 @@
-package com.jlcabral.sisys.example.domain.model;
+package com.jlcabral.sisys.example.domain.dto;
 
 public class ExampleModelDTO {
 

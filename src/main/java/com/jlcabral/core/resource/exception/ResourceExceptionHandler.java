@@ -1,4 +1,4 @@
-package com.jlcabral.core;
+package com.jlcabral.core.resource.exception;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
 import com.jlcabral.core.exception.EnumInvalidException;
-import com.jlcabral.core.resource.exception.ValidationError;
 import com.jlcabral.core.service.Messages;
 
 @ControllerAdvice
