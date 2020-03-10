@@ -1,6 +1,5 @@
 package com.jlcabral.sisys.module.example.service;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
@@ -16,25 +15,24 @@ import com.jlcabral.sisys.module.example.repository.ExampleRepository;
 public class ExampleService {
 
 	@Autowired
-	protected ExampleRepository repository;
-	
-	
+	protected ExampleRepository repository;	
+
 	public Optional<ExampleModel> findById(Long id) {
 		return repository.findById(id);
 	}
-	
+
 	public ExampleModel register(ExampleModelDTO dto) {
 		return ExampleFactory.mockExample();
 	}
-	
+
 	public ExampleModel update(Long id, ExampleModelDTO dto) {
 		return ExampleFactory.mockExample();
 	}
-	
+
 	public ExampleModel delete(Long id) {
 		return ExampleFactory.mockExample();
 	}
-	
+
 	public List<ExampleModel> findAll() {
 		return repository.findAll();
 	}
