@@ -18,7 +18,7 @@ public class MessageConfig implements WebMvcConfigurer {
 	@Bean
 	public MessageSource messageSource() {
 		ReloadableResourceBundleMessageSource messageSource = new ReloadableResourceBundleMessageSource();
-		messageSource.setBasenames("classpath:messages2/validation/message", "classpath:messages2/business/message");
+		messageSource.setBasenames("classpath:messages/validation/message", "classpath:messages/business/message");
 		messageSource.setUseCodeAsDefaultMessage(true);
 		return messageSource;
 	}

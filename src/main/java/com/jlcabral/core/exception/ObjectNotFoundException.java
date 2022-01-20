@@ -6,7 +6,7 @@ import com.jlcabral.core.enumerated.TypeMessageExceptionEnum;
 public class ObjectNotFoundException extends BusinessException {
 	private static final long serialVersionUID = -2960757890164313424L;
 
-	public ObjectNotFoundException(Long id, Class<?> clazz) {
+	public <ID> ObjectNotFoundException(ID id, Class<?> clazz) {
 		super();
 		String[] parametersMessageDevelop = {id.toString(), clazz.getSimpleName()};
 		setTypeMessage(TypeMessageExceptionEnum.E);

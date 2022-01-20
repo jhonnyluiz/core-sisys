@@ -13,14 +13,14 @@ public class ValidationError extends CommonError {
 	private String nameField;
 	private String valueField;
 	private String typeField;
-	private List<Object> valuesExpecteds;
+	private List<?> valuesExpecteds;
 
 	public ValidationError(String message, String codeMessage) {
 		super(message, codeMessage, TypeMessageExceptionEnum.E);
 	}
 
 	public ValidationError(String message, String codeMessage, String nameField, String valueField, String typeField,
-			List<Object> valuesExpecteds) {
+			List<?> valuesExpecteds) {
 		super(message, codeMessage, TypeMessageExceptionEnum.E);
 		this.nameField = nameField;
 		this.valueField = valueField;
@@ -44,11 +44,11 @@ public class ValidationError extends CommonError {
 		this.valueField = valueField;
 	}
 
-	public List<Object> getValuesExpecteds() {
+	public List<?> getValuesExpecteds() {
 		return valuesExpecteds;
 	}
 
-	public void setValuesExpecteds(List<Object> valuesExpecteds) {
+	public void setValuesExpecteds(List<?> valuesExpecteds) {
 		this.valuesExpecteds = valuesExpecteds;
 	}
 

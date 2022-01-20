@@ -6,16 +6,20 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import com.jlcabral.core.enumerated.TypeGenderEnum;
+import com.jlcabral.core.model.AppEntity;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class ExampleModel {
+public class ExampleModel extends AppEntity<Long> {
+	private static final long serialVersionUID = -149194150168965195L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

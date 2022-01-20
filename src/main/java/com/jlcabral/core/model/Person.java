@@ -1,7 +1,7 @@
 package com.jlcabral.core.model;
 
 import java.io.Serializable;
-import java.util.Date;
+import java.time.LocalDate;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -31,11 +31,11 @@ public class Person implements Serializable {
 	private String nomeSocial;
 	private TypeGenderEnum sexo;
 	private String cpf;
-	private Date dataNascimento;
+	private LocalDate dataNascimento;
 
 	private String registroGeral;
 	private String orgaoRegistroGeral;
-	private Date expedicaoRegistroGeral;
+	private LocalDate expedicaoRegistroGeral;
 
 	private Person mae;
 	private Person pai;
