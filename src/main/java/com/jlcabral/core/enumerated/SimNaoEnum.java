@@ -6,11 +6,11 @@ import com.jlcabral.core.util.ObjUtil;
 import lombok.Getter;
 
 @Getter
-public enum TypeGenderEnum {
+public enum SimNaoEnum {
 
-	M(1, "Masculino"), F(2, "Feminino"), I(3, "Indefinido");
+	SIM(1, "Sim"), NAO(2, "Não");
 
-	TypeGenderEnum(Integer codigo, String descricao) {
+	SimNaoEnum(Integer codigo, String descricao) {
 		this.codigo = codigo;
 		this.descricao = descricao;
 	}
@@ -18,14 +18,14 @@ public enum TypeGenderEnum {
 	private Integer codigo;
 	private String descricao;
 
-	public static TypeGenderEnum toEnum(Integer codigo) {
+	public static SimNaoEnum toEnum(Integer codigo) {
 		if (ObjUtil.isNotEmpty(codigo)) {
-			for (TypeGenderEnum enumerated : TypeGenderEnum.values()) {
+			for (SimNaoEnum enumerated : SimNaoEnum.values()) {
 				if (enumerated.getCodigo().equals(codigo)) {
 					return enumerated;
 				}
 			}
 		}
-		throw new EnumInvalidException(codigo, TypeGenderEnum.class.getSimpleName());
+		throw new EnumInvalidException(codigo, SimNaoEnum.class.getSimpleName());
 	}
 }

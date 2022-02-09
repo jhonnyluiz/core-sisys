@@ -1,15 +1,21 @@
 package com.jlcabral.core.service;
 
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.jlcabral.core.model.AppEntity;
+import com.jlcabral.core.entity.AppEntity;
 
 public abstract class AppCrudService<R extends JpaRepository<T, ID>, T extends AppEntity<ID>, ID>
 		extends AppReadService<R, T, ID> {
 
 	public T create(T entity) {
 		entity.setId(null);
-		return getRepo().save(entity);
+		return getRepo().save(toCreateValue(entity));
+	}
+
+	protected T toCreateValue(T entity) {
+		return entity;
 	}
 
 	public T update(ID id, T entity) {
@@ -17,6 +23,10 @@ public abstract class AppCrudService<R extends JpaRepository<T, ID>, T extends A
 		return getRepo().save(toUpdateValue(entity, entityDB));
 	}
 
+	public List<T> saveAll(List<T> entities) {
+		return getRepo().saveAll(entities);
+	}
+	
 	protected abstract T toUpdateValue(T entity, T entityDB);
 
 	public void delete(ID id) {

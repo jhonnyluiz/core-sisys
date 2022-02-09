@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import com.jlcabral.core.dto.AppDTO;
-import com.jlcabral.core.model.AppEntity;
+import com.jlcabral.core.entity.AppEntity;
 import com.jlcabral.core.service.AppCrudService;
 
 public abstract class AppCrudResource<S extends AppCrudService<R, T, ID>, R extends JpaRepository<T, ID>, DTO extends AppDTO, T extends AppEntity<ID>, ID>

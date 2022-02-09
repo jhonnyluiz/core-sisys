@@ -8,8 +8,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import com.jlcabral.core.entity.AppEntity;
 import com.jlcabral.core.exception.ObjectNotFoundException;
-import com.jlcabral.core.model.AppEntity;
 
 public abstract class AppReadService<R extends JpaRepository<T, ID>, T extends AppEntity<ID>, ID> {
 

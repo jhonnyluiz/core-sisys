@@ -18,7 +18,6 @@ import com.fasterxml.jackson.databind.exc.InvalidFormatException;
 import com.jlcabral.core.exception.EnumInvalidException;
 import com.jlcabral.core.exception.ObjectNotFoundException;
 import com.jlcabral.core.service.BusinessMessages;
-import com.jlcabral.core.util.ObjUtil;
 
 @ControllerAdvice
 public class ResourceExceptionHandler {

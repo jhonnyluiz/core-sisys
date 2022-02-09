@@ -12,7 +12,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-import com.jlcabral.core.model.AppEntity;
+import com.jlcabral.core.entity.AppEntity;
 import com.jlcabral.core.service.AppReadService;
 
 public abstract class AppReadResource<S extends AppReadService<R, T, ID>, R extends JpaRepository<T, ID>, T extends AppEntity<ID>, ID> {
