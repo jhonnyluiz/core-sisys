@@ -25,7 +25,7 @@ public class OperacaoSistema extends AppEntity<String> implements GrantedAuthori
 	@Id
 	@EqualsAndHashCode.Include
     private String id;
-
+	
     @Override
     public String getAuthority() {
         return id;

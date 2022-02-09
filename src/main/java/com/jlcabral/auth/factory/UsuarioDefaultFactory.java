@@ -4,12 +4,12 @@ import com.jlcabral.auth.contants.RoleConstant;
 import com.jlcabral.auth.entity.Usuario;
 import com.jlcabral.core.enumerated.SimNaoEnum;
 
-public class UsuarioAdminFactory {
+public class UsuarioDefaultFactory {
 
-	private UsuarioAdminFactory() {
+	private UsuarioDefaultFactory() {
 	}
 	
-	public static Usuario get() {
+	public static Usuario getAdmin() {
 		return Usuario.builder()
 				.username("admin")
 				.password("123456")
