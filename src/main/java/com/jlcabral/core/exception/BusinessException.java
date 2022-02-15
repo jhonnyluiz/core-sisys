@@ -18,6 +18,7 @@ public class BusinessException extends RuntimeException {
 	private String codeMessage;
 	private String message;
 	private Object[] parametersMessage;
+	private Boolean developError;
 
 	public BusinessException(String codeMessage, Object[] parametersMessage) {
 		setCodeMessage(codeMessage);

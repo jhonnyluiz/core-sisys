@@ -8,4 +8,6 @@ import com.jlcabral.csm.entity.Sistema;
 @Repository
 public interface SistemaRepository extends JpaRepository<Sistema, Long> {
 
+	Sistema findByCodigo(String codigo);
+
 }

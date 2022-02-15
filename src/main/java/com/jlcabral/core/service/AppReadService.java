@@ -44,7 +44,7 @@ public abstract class AppReadService<R extends JpaRepository<T, ID>, T extends A
 		return repository.findAll();
 	}
 
-	public Page<T> pageAll(Pageable pageable) {
+	public Page<T> findPaginado(Pageable pageable) {
 		return repository.findAll(pageable);
 	}
 }

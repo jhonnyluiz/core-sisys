@@ -15,8 +15,9 @@ import com.jlcabral.auth.config.JwtTokenUtil;
 import com.jlcabral.auth.dto.JwtTokenDTO;
 import com.jlcabral.auth.dto.UsuarioLoginDTO;
 import com.jlcabral.auth.entity.UsuarioDetails;
+import com.jlcabral.auth.resource.exceptions.InvalidCredentialsException;
+import com.jlcabral.auth.resource.exceptions.UserDisabledCredentialsException;
 import com.jlcabral.auth.service.UsuarioDetailsService;
-import com.jlcabral.core.enumerated.TypeMessageExceptionEnum;
 import com.jlcabral.core.exception.BusinessException;
 
 @RestController
@@ -44,9 +45,9 @@ public class AuthResource {
 		try {
 			authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, password));
 		} catch (DisabledException e) {
-			throw new BusinessException(TypeMessageExceptionEnum.E, "USER_DISABLED", "Usuário desabilitado", null);
+			throw new UserDisabledCredentialsException();
 		} catch (BadCredentialsException e) {
-			throw new BusinessException(TypeMessageExceptionEnum.E, "INVALID_CREDENTIALS", "Usuário ou senha incorretos", null);
+			throw new InvalidCredentialsException();
 		}
 	}
 }
