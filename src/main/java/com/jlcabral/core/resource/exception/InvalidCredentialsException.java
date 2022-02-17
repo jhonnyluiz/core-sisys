@@ -1,4 +1,4 @@
-package com.jlcabral.auth.resource.exceptions;
+package com.jlcabral.core.resource.exception;
 
 import com.jlcabral.core.enumerated.TypeMessageExceptionEnum;
 import com.jlcabral.core.exception.BusinessException;

@@ -1,4 +1,4 @@
-package com.jlcabral.auth.entity;
+package com.jlcabral.core.entity;
 
 import java.time.LocalDate;
 import java.util.Collection;

@@ -57,4 +57,27 @@ public class ResourceExceptionHandler {
 		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(listErros);
 	}
 
+	@ExceptionHandler(InvalidCredentialsException.class)
+	public ResponseEntity<CommonError> invalideCredential(InvalidCredentialsException e, HttpServletRequest request) {
+		CommonError err = new CommonError(e.getMessage(), e.getCodeMessage(), e.getTypeMessage(), e.getDevelopError());
+		return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(err);
+	}
+	
+	@ExceptionHandler(TokenExpiredException.class)
+	public ResponseEntity<CommonError> tokenExpired(TokenExpiredException e, HttpServletRequest request) {
+		CommonError err = new CommonError(e.getMessage(), e.getCodeMessage(), e.getTypeMessage(), e.getDevelopError());
+		return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(err);
+	}
+	
+	@ExceptionHandler(TokenInvalidException.class)
+	public ResponseEntity<CommonError> tokenInvalid(TokenInvalidException e, HttpServletRequest request) {
+		CommonError err = new CommonError(e.getMessage(), e.getCodeMessage(), e.getTypeMessage(), e.getDevelopError());
+		return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(err);
+	}
+	
+	@ExceptionHandler(UserDisabledCredentialsException.class)
+	public ResponseEntity<CommonError> userDisabled(UserDisabledCredentialsException e, HttpServletRequest request) {
+		CommonError err = new CommonError(e.getMessage(), e.getCodeMessage(), e.getTypeMessage(), e.getDevelopError());
+		return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(err);
+	}
 }

@@ -1,4 +1,4 @@
-package com.jlcabral.auth.service;
+package com.jlcabral.core.service;
 
 import java.util.Optional;
 
@@ -7,9 +7,9 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.jlcabral.auth.entity.Usuario;
-import com.jlcabral.auth.entity.UsuarioDetails;
-import com.jlcabral.auth.repository.UsuarioRepository;
+import com.jlcabral.core.entity.Usuario;
+import com.jlcabral.core.entity.UsuarioDetails;
+import com.jlcabral.core.repository.UsuarioRepository;
 
 @Service
 public class UsuarioDetailsService implements UserDetailsService {

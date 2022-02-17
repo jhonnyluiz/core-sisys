@@ -1,4 +1,4 @@
-package com.jlcabral.auth.config;
+package com.jlcabral.core.config;
 
 import java.util.Arrays;
 

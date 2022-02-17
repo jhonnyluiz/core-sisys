@@ -1,4 +1,4 @@
-package com.jlcabral.auth.entity;
+package com.jlcabral.core.entity;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -14,7 +14,6 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.jlcabral.core.entity.AppEntity;
 import com.jlcabral.core.enumerated.SimNaoEnum;
 
 import lombok.AllArgsConstructor;

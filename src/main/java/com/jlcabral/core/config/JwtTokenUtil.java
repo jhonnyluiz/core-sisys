@@ -1,4 +1,4 @@
-package com.jlcabral.auth.config;
+package com.jlcabral.core.config;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -11,7 +11,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 
-import com.jlcabral.auth.entity.UsuarioDetails;
+import com.jlcabral.core.entity.UsuarioDetails;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
@@ -22,7 +22,7 @@ public class JwtTokenUtil implements Serializable {
 
 	private static final long serialVersionUID = -2550185165626007488L;
 
-	public static final long JWT_TOKEN_VALIDITY = 5 * 60 * 60;
+	public static final long JWT_TOKEN_VALIDITY =  2 * 60 * 60;
 
 	@Value("${jwt.secret}")
 	private String secret;

@@ -1,11 +1,9 @@
-package com.jlcabral.auth.entity;
+package com.jlcabral.core.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
 import org.springframework.security.core.GrantedAuthority;
-
-import com.jlcabral.core.entity.AppEntity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

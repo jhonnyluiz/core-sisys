@@ -83,4 +83,8 @@ public class ItemMenu extends AppEntity<Long> {
 
 	@OneToMany(mappedBy = "itemPai", cascade = CascadeType.ALL)
 	private List<ItemMenu> items;
+	
+	public String getRouterLink() {
+		return url;
+	}
 }

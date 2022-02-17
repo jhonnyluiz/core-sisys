@@ -1,10 +1,9 @@
-package com.jlcabral.auth.service;
+package com.jlcabral.core.service;
 
 import org.springframework.stereotype.Service;
 
-import com.jlcabral.auth.entity.Role;
-import com.jlcabral.auth.repository.RoleRepository;
-import com.jlcabral.core.service.AppCrudService;
+import com.jlcabral.core.entity.Role;
+import com.jlcabral.core.repository.RoleRepository;
 
 @Service
 public class RoleService extends AppCrudService<RoleRepository, Role, String>{

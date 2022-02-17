@@ -1,4 +1,4 @@
-package com.jlcabral.auth.resource;
+package com.jlcabral.core.resource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -11,14 +11,14 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.jlcabral.auth.config.JwtTokenUtil;
-import com.jlcabral.auth.dto.JwtTokenDTO;
-import com.jlcabral.auth.dto.UsuarioLoginDTO;
-import com.jlcabral.auth.entity.UsuarioDetails;
-import com.jlcabral.auth.resource.exceptions.InvalidCredentialsException;
-import com.jlcabral.auth.resource.exceptions.UserDisabledCredentialsException;
-import com.jlcabral.auth.service.UsuarioDetailsService;
+import com.jlcabral.core.config.JwtTokenUtil;
+import com.jlcabral.core.dto.JwtTokenDTO;
+import com.jlcabral.core.dto.UsuarioLoginDTO;
+import com.jlcabral.core.entity.UsuarioDetails;
 import com.jlcabral.core.exception.BusinessException;
+import com.jlcabral.core.resource.exception.InvalidCredentialsException;
+import com.jlcabral.core.resource.exception.UserDisabledCredentialsException;
+import com.jlcabral.core.service.UsuarioDetailsService;
 
 @RestController
 @RequestMapping(path = "/auth")

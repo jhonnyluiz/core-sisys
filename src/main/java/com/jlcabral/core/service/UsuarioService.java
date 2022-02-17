@@ -1,13 +1,12 @@
-package com.jlcabral.auth.service;
+package com.jlcabral.core.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.jlcabral.auth.entity.Usuario;
-import com.jlcabral.auth.repository.UsuarioRepository;
+import com.jlcabral.core.entity.Usuario;
 import com.jlcabral.core.enumerated.SimNaoEnum;
-import com.jlcabral.core.service.AppCrudService;
+import com.jlcabral.core.repository.UsuarioRepository;
 
 @Service
 public class UsuarioService extends AppCrudService<UsuarioRepository, Usuario, Long> {

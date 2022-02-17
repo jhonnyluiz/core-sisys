@@ -1,9 +1,9 @@
-package com.jlcabral.auth.repository;
+package com.jlcabral.core.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.jlcabral.auth.entity.Role;
+import com.jlcabral.core.entity.Role;
 
 @Repository
 public interface RoleRepository extends JpaRepository<Role, String> {

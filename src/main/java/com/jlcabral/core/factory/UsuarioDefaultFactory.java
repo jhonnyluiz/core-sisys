@@ -1,7 +1,7 @@
-package com.jlcabral.auth.factory;
+package com.jlcabral.core.factory;
 
-import com.jlcabral.auth.contants.RoleConstant;
-import com.jlcabral.auth.entity.Usuario;
+import com.jlcabral.core.constant.RoleConstant;
+import com.jlcabral.core.entity.Usuario;
 import com.jlcabral.core.enumerated.SimNaoEnum;
 
 public class UsuarioDefaultFactory {

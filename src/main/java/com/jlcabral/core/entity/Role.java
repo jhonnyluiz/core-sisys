@@ -1,4 +1,4 @@
-package com.jlcabral.auth.entity;
+package com.jlcabral.core.entity;
 
 import java.util.List;
 
@@ -8,8 +8,6 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 
 import org.springframework.security.core.GrantedAuthority;
-
-import com.jlcabral.core.entity.AppEntity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

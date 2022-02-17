@@ -1,4 +1,4 @@
-package com.jlcabral.auth.config;
+package com.jlcabral.core.config;
 
 import java.util.List;
 
@@ -7,11 +7,11 @@ import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
 
-import com.jlcabral.auth.contants.RoleConstant;
-import com.jlcabral.auth.entity.Usuario;
-import com.jlcabral.auth.factory.UsuarioDefaultFactory;
-import com.jlcabral.auth.service.RoleService;
-import com.jlcabral.auth.service.UsuarioService;
+import com.jlcabral.core.constant.RoleConstant;
+import com.jlcabral.core.entity.Usuario;
+import com.jlcabral.core.factory.UsuarioDefaultFactory;
+import com.jlcabral.core.service.RoleService;
+import com.jlcabral.core.service.UsuarioService;
 
 @Component
 public class DataAuthInitializer implements ApplicationListener<ContextRefreshedEvent> {

@@ -1,4 +1,4 @@
-package com.jlcabral.auth.contants;
+package com.jlcabral.core.constant;
 
 import static java.util.stream.Collectors.toList;
 
@@ -8,8 +8,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import com.jlcabral.auth.entity.OperacaoSistema;
-import com.jlcabral.auth.entity.Role;
+import com.jlcabral.core.entity.OperacaoSistema;
+import com.jlcabral.core.entity.Role;
 
 public class RoleConstant {
 	private RoleConstant() {

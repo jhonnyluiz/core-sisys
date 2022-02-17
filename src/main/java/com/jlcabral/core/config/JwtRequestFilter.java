@@ -1,4 +1,4 @@
-package com.jlcabral.auth.config;
+package com.jlcabral.core.config;
 
 import java.io.IOException;
 
@@ -15,7 +15,8 @@ import org.springframework.security.web.authentication.WebAuthenticationDetailsS
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
-import com.jlcabral.auth.service.UsuarioDetailsService;
+import com.jlcabral.core.resource.exception.TokenInvalidException;
+import com.jlcabral.core.service.UsuarioDetailsService;
 
 import io.jsonwebtoken.ExpiredJwtException;
 
@@ -40,8 +41,10 @@ public class JwtRequestFilter extends OncePerRequestFilter {
 				username = jwtTokenUtil.getUsernameFromToken(jwtToken);
 			} catch (IllegalArgumentException e) {
 				System.out.println("Unable to get JWT Token");
+				throw new TokenInvalidException();
 			} catch (ExpiredJwtException e) {
 				System.out.println("JWT Token has expired");
+//				throw new TokenExpiredException();
 			}
 		} else {
 			logger.warn("JWT Token does not begin with Bearer String");

@@ -1,6 +1,4 @@
-package com.jlcabral.auth.dto;
-
-import com.jlcabral.core.dto.AppDTO;
+package com.jlcabral.core.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
