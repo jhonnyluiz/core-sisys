@@ -37,7 +37,11 @@ public abstract class AppReadService<R extends JpaRepository<T, ID>, T extends A
 	}
 
 	public T findById(ID id) {
-		return repository.findById(id).orElseThrow(() -> new ObjectNotFoundException(id, entityClass));
+		return mapperEntity(repository.findById(id).orElseThrow(() -> new ObjectNotFoundException(id, entityClass)));
+	}
+
+	protected T mapperEntity(T entity) {
+		return entity;
 	}
 
 	public List<T> findAll() {

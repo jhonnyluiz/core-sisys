@@ -6,7 +6,6 @@ import static com.jlcabral.csm.constant.SistemaConstant.CONFIGURACOES_SEGURANCA;
 import static com.jlcabral.csm.constant.SistemaConstant.CSM_SISTEMA;
 import static com.jlcabral.csm.constant.SistemaConstant.PARAMETRIZACAO;
 import static com.jlcabral.csm.constant.SistemaConstant.PARAMETRIZACAO_MENU;
-import static com.jlcabral.csm.constant.SistemaConstant.PARAMETRIZACAO_MENU_ITEM_MENU;
 import static com.jlcabral.csm.constant.SistemaConstant.PARAMETRIZACAO_MENU_SISTEMA;
 import static com.jlcabral.csm.constant.SistemaConstant.PARAMETRIZACAO_OPERACOES;
 import static com.jlcabral.csm.constant.SistemaConstant.PARAMETRIZACAO_PERFIS;
@@ -40,18 +39,14 @@ public class DataCsmInitializer implements ApplicationListener<ContextRefreshedE
 		parametrizacao.setSistema(sistemaCSM);
 
 		ItemMenu parametrizacaoMenu = PARAMETRIZACAO_MENU;
-		
-		ItemMenu parametrizacaoMenuItemMenu = PARAMETRIZACAO_MENU_ITEM_MENU;
-		parametrizacaoMenuItemMenu.setSistema(sistemaCSM);
-		parametrizacaoMenuItemMenu.setItemPai(parametrizacaoMenu);
-		
+				
 		ItemMenu parametrizacaoMenuSistema = PARAMETRIZACAO_MENU_SISTEMA;
 		parametrizacaoMenuSistema.setSistema(sistemaCSM);
 		parametrizacaoMenuSistema.setItemPai(parametrizacaoMenu);
 
 		parametrizacaoMenu.setSistema(sistemaCSM);
 		parametrizacaoMenu.setItemPai(parametrizacao);
-		parametrizacaoMenu.setItems(asList(parametrizacaoMenuItemMenu, parametrizacaoMenuSistema));
+		parametrizacaoMenu.setItems(asList(parametrizacaoMenuSistema));
 		
 		ItemMenu parametrizacaoPerfis = PARAMETRIZACAO_PERFIS;
 		parametrizacaoPerfis.setSistema(sistemaCSM);

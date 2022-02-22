@@ -20,4 +20,9 @@ public class SistemaResource extends AppCrudResource<SistemaService, SistemaRepo
 	public ResponseEntity<Sistema> findByCodSistema(@PathVariable("codSistema") String codSistema) {
 		return ResponseEntity.ok(getService().findByCodSistema(codSistema));
 	}
+	
+	@GetMapping("/exists/{codSistema}")
+	public ResponseEntity<Boolean> existsByCodigo(@PathVariable("codSistema") String codSistema) {
+		return ResponseEntity.ok(getService().existsSistemaByCodigo(codSistema));
+	}
 }

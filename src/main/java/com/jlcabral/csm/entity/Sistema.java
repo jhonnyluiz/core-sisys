@@ -1,5 +1,8 @@
 package com.jlcabral.csm.entity;
 
+import static java.util.Comparator.comparing;
+import static java.util.stream.Collectors.toList;
+
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -16,6 +19,7 @@ import javax.persistence.Table;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.jlcabral.core.entity.AppEntity;
+import com.jlcabral.core.util.ObjUtil;
 import com.jlcabral.csm.enumerated.TypeSituacaoEnum;
 
 import lombok.AllArgsConstructor;
@@ -44,7 +48,7 @@ public class Sistema extends AppEntity<Long> {
 	@Column(name = "NOME_SISTEMA", length = 50, nullable = false)
 	private String nome;
 
-	@Column(name = "COD_SISTEMA", length = 25, nullable = false)
+	@Column(name = "COD_SISTEMA", length = 25, nullable = false, unique = true)
 	private String codigo;
 
 	@Column(name = "DESC_SISTEMA")
@@ -57,7 +61,13 @@ public class Sistema extends AppEntity<Long> {
 	@Enumerated(EnumType.STRING)
 	private TypeSituacaoEnum typeSituacao;
 
-    @JsonInclude(Include.NON_EMPTY)
-	@OneToMany(mappedBy = "sistema", cascade = CascadeType.ALL, orphanRemoval = true)
+	@OneToMany(mappedBy = "sistema", cascade = CascadeType.ALL)
 	private List<ItemMenu> itensMenu;
+	
+	public List<ItemMenu> getItensMenu() {
+		if (ObjUtil.isNotEmpty(this.itensMenu)) {
+			return this.itensMenu.stream().sorted(comparing(ItemMenu::getOrder)).collect(toList());
+		}
+		return this.itensMenu;
+	}
 }

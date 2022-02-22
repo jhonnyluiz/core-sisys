@@ -1,5 +1,8 @@
 package com.jlcabral.csm.entity;
 
+import static java.util.Comparator.comparing;
+import static java.util.stream.Collectors.toList;
+
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -17,6 +20,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.jlcabral.core.entity.AppEntity;
+import com.jlcabral.core.util.ObjUtil;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -35,10 +39,9 @@ import lombok.NoArgsConstructor;
 public class ItemMenu extends AppEntity<Long> {
 	private static final long serialVersionUID = -4000449371919630450L;
 
-	@JsonIgnore
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@EqualsAndHashCode.Include	
+	@EqualsAndHashCode.Include
 	@Column(name = "ID_ITENS_MENU")
 	private Long id;
 
@@ -83,8 +86,28 @@ public class ItemMenu extends AppEntity<Long> {
 
 	@OneToMany(mappedBy = "itemPai", cascade = CascadeType.ALL)
 	private List<ItemMenu> items;
-	
+
+	@Column(name = "ORDER_ITEM")
+	private Integer order;
+
 	public String getRouterLink() {
 		return url;
+	}
+
+	@JsonIgnore
+	public ItemMenu setData(Sistema sistema, ItemMenu itemPai) {
+		this.sistema = sistema;
+		this.itemPai = itemPai;
+		if (ObjUtil.isNotEmpty(items)) {
+			this.items.forEach(i -> i.setData(sistema, this));
+		}
+		return this;
+	}
+
+	public List<ItemMenu> getItems() {
+		if (ObjUtil.isNotEmpty(this.items)) {
+			return this.items.stream().sorted(comparing(ItemMenu::getOrder)).collect(toList());
+		}
+		return this.items;
 	}
 }

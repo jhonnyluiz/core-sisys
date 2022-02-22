@@ -11,7 +11,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.web.PageableDefault;
 import org.springframework.data.web.SortDefault;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -54,7 +53,7 @@ public abstract class AppReadResource<S extends AppReadService<R, T, ID>, R exte
 	}
 
 	@GetMapping
-	public ResponseEntity<Page<T>> listPaginado(@PageableDefault(page = 0, size = 20) @SortDefault.SortDefaults({
+	public ResponseEntity<Page<T>> listPaginado(@SortDefault.SortDefaults({
 			@SortDefault(sort = "id", direction = Sort.Direction.ASC) }) Pageable pageable) {
 		return ResponseEntity.ok(service.findPaginado(pageable));
 	}

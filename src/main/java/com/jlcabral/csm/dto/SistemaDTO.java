@@ -23,5 +23,5 @@ public class SistemaDTO extends AppDTO {
 	private String nome;
 	private String codigo;
 	private TypeSituacaoEnum typeSituacao;
-	private List<SistemaModuloDTO> modulos;
+	private List<ItemMenuDTO> itensMenu;
 }

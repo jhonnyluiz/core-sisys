@@ -3,9 +3,6 @@ package com.jlcabral.csm.dto;
 import java.util.List;
 
 import com.jlcabral.core.dto.AppDTO;
-import com.jlcabral.csm.entity.Sistema;
-import com.jlcabral.csm.enumerated.TypeModuloEnum;
-import com.jlcabral.csm.enumerated.TypeSituacaoEnum;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -18,15 +15,19 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = false)
-public class SistemaModuloDTO extends AppDTO {
+public class ItemMenuDTO extends AppDTO {
 	private static final long serialVersionUID = -4577615062231534675L;
-	
+
 	private Long id;
-	private String nome;
-	private String codigo;
-	private TypeSituacaoEnum typeSituacao;
-	private TypeModuloEnum typeModulo;
-	private String urlModulo;
-	private Sistema sistema;
-	private List<SistemaModuloDTO> modulosFilhos;
+	private String label;
+	private String icon;
+	private String url;
+	private boolean disabled;
+	private boolean visible;
+	private String badge;
+	private String tooltip;
+	private String tooltipPosition;
+	private String styleClass;
+	private Integer order;
+	private List<ItemMenuDTO> items;
 }

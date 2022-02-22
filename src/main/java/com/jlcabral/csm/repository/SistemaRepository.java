@@ -10,4 +10,6 @@ public interface SistemaRepository extends JpaRepository<Sistema, Long> {
 
 	Sistema findByCodigo(String codigo);
 
+	Boolean existsSistemaByCodigo(String codSistema);
+
 }
