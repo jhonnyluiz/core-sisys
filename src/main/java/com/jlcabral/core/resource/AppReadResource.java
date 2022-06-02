@@ -1,5 +1,6 @@
 package com.jlcabral.core.resource;
 
+import static com.jlcabral.core.constant.PathResource.ALL;
 import static com.jlcabral.core.constant.PathResource.ID;
 
 import java.lang.reflect.ParameterizedType;
@@ -47,7 +48,7 @@ public abstract class AppReadResource<S extends AppReadService<R, T, ID>, R exte
 		return service;
 	}
 
-	@GetMapping("/all")
+	@GetMapping(ALL)
 	public ResponseEntity<List<T>> listAll() {
 		return ResponseEntity.ok(service.findAll());
 	}

@@ -1,6 +1,9 @@
 package com.jlcabral.core.resource;
 
+import static com.jlcabral.core.constant.PathResource.ALL;
 import static com.jlcabral.core.constant.PathResource.ID;
+
+import java.util.List;
 
 import javax.validation.Valid;
 
@@ -11,6 +14,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.jlcabral.core.dto.AppDTO;
 import com.jlcabral.core.entity.AppEntity;
@@ -20,7 +24,7 @@ public abstract class AppCrudResource<S extends AppCrudService<R, T, ID>, R exte
 		extends AppReadResource<S, R, T, ID> {
 
 	@PostMapping
-	public ResponseEntity<T> objectRegister(@Valid @RequestBody DTO dto) {
+	public ResponseEntity<T> objectCreate(@Valid @RequestBody DTO dto) {
 		T entity = modelMapper.map(dto, entityClass);
 		return ResponseEntity.ok(getService().create(entity));
 	}
@@ -31,7 +35,14 @@ public abstract class AppCrudResource<S extends AppCrudService<R, T, ID>, R exte
 	}
 
 	@DeleteMapping(ID)
-	public ResponseEntity<Void> objectDelete(@PathVariable Long id) {
+	public ResponseEntity<Void> objectDelete(@PathVariable ID id) {
+		getService().delete(id);
+		return ResponseEntity.ok().build();
+	}
+
+	@DeleteMapping(ALL)
+	public ResponseEntity<Void> objectDeleteAll(@RequestParam List<ID> ids) {
+		getService().deleteAll(ids);
 		return ResponseEntity.ok().build();
 	}
 

@@ -32,4 +32,8 @@ public abstract class AppCrudService<R extends JpaRepository<T, ID>, T extends A
 	public void delete(ID id) {
 		getRepo().deleteById(id);
 	}
+	
+	public void deleteAll(List<ID> ids) {
+		getRepo().deleteAllById(ids);
+	}
 }

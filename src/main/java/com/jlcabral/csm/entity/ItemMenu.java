@@ -76,18 +76,24 @@ public class ItemMenu extends AppEntity<Long> {
 
 	@JsonIgnore
 	@ManyToOne
-	@JoinColumn(name = "ID_SISTEMA")
+	@JoinColumn(name = "ID_SISTEMA", nullable = false)
 	private Sistema sistema;
+	
+	@Column(name = "ID_SISTEMA", insertable = false, updatable = false)
+	private Long sistemaId;
 
 	@JsonIgnore
 	@ManyToOne
 	@JoinColumn(name = "ID_ITENS_MENU_PAI")
 	private ItemMenu itemPai;
+	
+	@Column(name = "ID_ITENS_MENU_PAI", insertable = false, updatable = false)
+	private Long itemPaiId;
 
 	@OneToMany(mappedBy = "itemPai", cascade = CascadeType.ALL)
 	private List<ItemMenu> items;
 
-	@Column(name = "ORDER_ITEM")
+	@Column(name = "ORDER_ITEM", nullable = false)
 	private Integer order;
 
 	public String getRouterLink() {

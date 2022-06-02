@@ -9,6 +9,7 @@ import java.util.stream.Collectors;
 import org.springframework.stereotype.Service;
 
 import com.jlcabral.core.service.AppCrudService;
+import com.jlcabral.core.util.ObjUtil;
 import com.jlcabral.csm.entity.ItemMenu;
 import com.jlcabral.csm.entity.Sistema;
 import com.jlcabral.csm.repository.SistemaRepository;
@@ -22,8 +23,10 @@ public class SistemaService extends AppCrudService<SistemaRepository, Sistema, L
 		entityDB.setTypeSituacao(entity.getTypeSituacao());
 		entityDB.setUrl(entity.getUrl());
 		entityDB.setDescricao(entity.getDescricao());
-		entityDB.setItensMenu(
-				entity.getItensMenu().stream().map(item -> item.setData(entityDB, null)).collect(Collectors.toList()));
+		if (ObjUtil.isNotEmpty(entity.getItensMenu())) {			
+			entityDB.setItensMenu(
+					entity.getItensMenu().stream().map(item -> item.setData(entityDB, null)).collect(Collectors.toList()));
+		}
 		return entityDB;
 	}
 

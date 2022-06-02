@@ -30,4 +30,6 @@ public class ItemMenuDTO extends AppDTO {
 	private String styleClass;
 	private Integer order;
 	private List<ItemMenuDTO> items;
+	private Long sistemaId;
+	private Long itemPaiId;
 }

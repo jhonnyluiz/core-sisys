@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.jlcabral.core.constant.PathResource;
 import com.jlcabral.core.resource.AppCrudResource;
 import com.jlcabral.csm.dto.SistemaDTO;
 import com.jlcabral.csm.entity.Sistema;
@@ -13,7 +14,7 @@ import com.jlcabral.csm.repository.SistemaRepository;
 import com.jlcabral.csm.service.SistemaService;
 
 @RestController
-@RequestMapping("/sistemas")
+@RequestMapping(PathResource.SISTEMAS)
 public class SistemaResource extends AppCrudResource<SistemaService, SistemaRepository, SistemaDTO, Sistema, Long> {
 
 	@GetMapping("/byCodigo/{codSistema}")
