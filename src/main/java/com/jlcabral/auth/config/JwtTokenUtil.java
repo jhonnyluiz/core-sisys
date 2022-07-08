@@ -1,4 +1,4 @@
-package com.jlcabral.core.config;
+package com.jlcabral.auth.config;
 
 import java.io.Serializable;
 import java.util.Date;

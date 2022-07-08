@@ -12,7 +12,7 @@ import com.jlcabral.core.service.BusinessMessages;
 import com.jlcabral.core.util.ObjUtil;
 
 @RestController
-@RequestMapping(path = PathResource.MESSAGE)
+@RequestMapping(path = PathResource.MESSAGES)
 public class MessageResource {
 	
 	@Autowired

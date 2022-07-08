@@ -14,7 +14,8 @@ public class PathResource {
 	/**
 	 * PATH DE RESOURCES
 	 */
-	public static final String MESSAGE = "/message";
+	public static final String MESSAGES = "/messages";
 	public static final String SISTEMAS = "/sistemas";
 	public static final String ITENS_MENU = "/itens-menu";
+	public static final String USUARIOS = "/usuarios";
 }

@@ -38,6 +38,9 @@ public class Usuario extends AppEntity<Long> {
 
 	@Column(unique = true)
 	private String username;
+	
+	@Column(name = "cod_pessoa")
+	private Long pessoaId;
 
 	@JsonIgnore
 	private String password;

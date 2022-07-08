@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.jlcabral.core.config.JwtTokenUtil;
+import com.jlcabral.auth.config.JwtTokenUtil;
 import com.jlcabral.core.dto.JwtTokenDTO;
 import com.jlcabral.core.dto.UsuarioLoginDTO;
 import com.jlcabral.core.entity.UsuarioDetails;
