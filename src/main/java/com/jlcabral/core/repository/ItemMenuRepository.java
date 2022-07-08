@@ -1,4 +1,4 @@
-package com.jlcabral.csm.repository;
+package com.jlcabral.core.repository;
 
 import java.util.List;
 
@@ -6,8 +6,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import com.jlcabral.csm.dto.SelectDTO;
-import com.jlcabral.csm.entity.ItemMenu;
+import com.jlcabral.core.dto.SelectDTO;
+import com.jlcabral.core.entity.ItemMenu;
 
 @Repository
 public interface ItemMenuRepository extends JpaRepository<ItemMenu, Long>{

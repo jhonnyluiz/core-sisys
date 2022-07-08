@@ -1,4 +1,4 @@
-package com.jlcabral.auth.resource;
+package com.jlcabral.core.resource;
 
 import java.util.Arrays;
 import java.util.List;

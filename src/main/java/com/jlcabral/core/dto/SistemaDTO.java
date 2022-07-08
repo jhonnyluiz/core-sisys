@@ -1,9 +1,8 @@
-package com.jlcabral.csm.dto;
+package com.jlcabral.core.dto;
 
 import java.util.List;
 
-import com.jlcabral.core.dto.AppDTO;
-import com.jlcabral.csm.enumerated.TypeSituacaoEnum;
+import com.jlcabral.core.enumerated.TypeSituacaoEnum;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

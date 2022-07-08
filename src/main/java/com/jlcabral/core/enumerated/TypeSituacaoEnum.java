@@ -1,4 +1,4 @@
-package com.jlcabral.csm.enumerated;
+package com.jlcabral.core.enumerated;
 
 import com.jlcabral.core.exception.EnumInvalidException;
 import com.jlcabral.core.util.ObjUtil;

@@ -1,4 +1,4 @@
-package com.jlcabral.csm.service;
+package com.jlcabral.core.service;
 
 import static com.jlcabral.core.util.ObjUtil.isEmpty;
 import static java.util.stream.Collectors.toList;
@@ -8,11 +8,10 @@ import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Service;
 
-import com.jlcabral.core.service.AppCrudService;
+import com.jlcabral.core.entity.ItemMenu;
+import com.jlcabral.core.entity.Sistema;
+import com.jlcabral.core.repository.SistemaRepository;
 import com.jlcabral.core.util.ObjUtil;
-import com.jlcabral.csm.entity.ItemMenu;
-import com.jlcabral.csm.entity.Sistema;
-import com.jlcabral.csm.repository.SistemaRepository;
 
 @Service
 public class SistemaService extends AppCrudService<SistemaRepository, Sistema, Long> {

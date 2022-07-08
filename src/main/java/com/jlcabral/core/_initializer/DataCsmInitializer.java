@@ -1,14 +1,14 @@
-package com.jlcabral.csm.config;
+package com.jlcabral.core._initializer;
 
-import static com.jlcabral.csm.constant.SistemaConstant.CONFIGURACOES;
-import static com.jlcabral.csm.constant.SistemaConstant.CONFIGURACOES_PERFIL;
-import static com.jlcabral.csm.constant.SistemaConstant.CONFIGURACOES_SEGURANCA;
-import static com.jlcabral.csm.constant.SistemaConstant.CSM_SISTEMA;
-import static com.jlcabral.csm.constant.SistemaConstant.PARAMETRIZACAO;
-import static com.jlcabral.csm.constant.SistemaConstant.PARAMETRIZACAO_MENU;
-import static com.jlcabral.csm.constant.SistemaConstant.PARAMETRIZACAO_MENU_SISTEMA;
-import static com.jlcabral.csm.constant.SistemaConstant.PARAMETRIZACAO_OPERACOES;
-import static com.jlcabral.csm.constant.SistemaConstant.PARAMETRIZACAO_PERFIS;
+import static com.jlcabral.core.constant.SistemaConstant.CONFIGURACOES;
+import static com.jlcabral.core.constant.SistemaConstant.CONFIGURACOES_PERFIL;
+import static com.jlcabral.core.constant.SistemaConstant.CONFIGURACOES_SEGURANCA;
+import static com.jlcabral.core.constant.SistemaConstant.CSM_SISTEMA;
+import static com.jlcabral.core.constant.SistemaConstant.PARAMETRIZACAO;
+import static com.jlcabral.core.constant.SistemaConstant.PARAMETRIZACAO_MENU;
+import static com.jlcabral.core.constant.SistemaConstant.PARAMETRIZACAO_MENU_SISTEMA;
+import static com.jlcabral.core.constant.SistemaConstant.PARAMETRIZACAO_OPERACOES;
+import static com.jlcabral.core.constant.SistemaConstant.PARAMETRIZACAO_PERFIS;
 import static java.util.Arrays.asList;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,9 +16,9 @@ import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
 
-import com.jlcabral.csm.entity.ItemMenu;
-import com.jlcabral.csm.entity.Sistema;
-import com.jlcabral.csm.service.SistemaService;
+import com.jlcabral.core.entity.ItemMenu;
+import com.jlcabral.core.entity.Sistema;
+import com.jlcabral.core.service.SistemaService;
 
 @Component
 public class DataCsmInitializer implements ApplicationListener<ContextRefreshedEvent> {

@@ -1,8 +1,8 @@
-package com.jlcabral.csm.constant;
+package com.jlcabral.core.constant;
 
-import com.jlcabral.csm.entity.ItemMenu;
-import com.jlcabral.csm.entity.Sistema;
-import com.jlcabral.csm.enumerated.TypeSituacaoEnum;
+import com.jlcabral.core.entity.ItemMenu;
+import com.jlcabral.core.entity.Sistema;
+import com.jlcabral.core.enumerated.TypeSituacaoEnum;
 
 public class SistemaConstant {
 	private SistemaConstant() {

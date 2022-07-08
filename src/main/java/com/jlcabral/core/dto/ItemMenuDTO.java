@@ -1,8 +1,6 @@
-package com.jlcabral.csm.dto;
+package com.jlcabral.core.dto;
 
 import java.util.List;
-
-import com.jlcabral.core.dto.AppDTO;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

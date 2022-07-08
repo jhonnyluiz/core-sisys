@@ -1,4 +1,4 @@
-package com.jlcabral.csm.entity;
+package com.jlcabral.core.entity;
 
 import static java.util.Comparator.comparing;
 import static java.util.stream.Collectors.toList;
@@ -19,7 +19,6 @@ import javax.persistence.Table;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
-import com.jlcabral.core.entity.AppEntity;
 import com.jlcabral.core.util.ObjUtil;
 
 import lombok.AllArgsConstructor;

@@ -1,4 +1,4 @@
-package com.jlcabral.csm.resource;
+package com.jlcabral.core.resource;
 
 import java.util.List;
 
@@ -9,12 +9,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.jlcabral.core.constant.PathResource;
-import com.jlcabral.core.resource.AppCrudResource;
-import com.jlcabral.csm.dto.ItemMenuDTO;
-import com.jlcabral.csm.dto.SelectDTO;
-import com.jlcabral.csm.entity.ItemMenu;
-import com.jlcabral.csm.repository.ItemMenuRepository;
-import com.jlcabral.csm.service.ItemMenuService;
+import com.jlcabral.core.dto.ItemMenuDTO;
+import com.jlcabral.core.dto.SelectDTO;
+import com.jlcabral.core.entity.ItemMenu;
+import com.jlcabral.core.repository.ItemMenuRepository;
+import com.jlcabral.core.service.ItemMenuService;
 
 @RestController
 @RequestMapping(PathResource.ITENS_MENU)

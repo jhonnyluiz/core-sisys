@@ -1,4 +1,4 @@
-package com.jlcabral.auth._initializer;
+package com.jlcabral.core._initializer;
 
 import java.util.List;
 

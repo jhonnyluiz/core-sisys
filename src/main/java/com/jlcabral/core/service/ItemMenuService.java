@@ -1,15 +1,14 @@
-package com.jlcabral.csm.service;
+package com.jlcabral.core.service;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.jlcabral.core.service.AppCrudService;
+import com.jlcabral.core.dto.SelectDTO;
+import com.jlcabral.core.entity.ItemMenu;
+import com.jlcabral.core.entity.Sistema;
+import com.jlcabral.core.repository.ItemMenuRepository;
 import com.jlcabral.core.util.ObjUtil;
-import com.jlcabral.csm.dto.SelectDTO;
-import com.jlcabral.csm.entity.ItemMenu;
-import com.jlcabral.csm.entity.Sistema;
-import com.jlcabral.csm.repository.ItemMenuRepository;
 
 @Service
 public class ItemMenuService extends AppCrudService<ItemMenuRepository, ItemMenu, Long> {

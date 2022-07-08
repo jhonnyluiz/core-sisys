@@ -1,9 +1,9 @@
-package com.jlcabral.csm.repository;
+package com.jlcabral.core.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.jlcabral.csm.entity.Sistema;
+import com.jlcabral.core.entity.Sistema;
 
 @Repository
 public interface SistemaRepository extends JpaRepository<Sistema, Long> {

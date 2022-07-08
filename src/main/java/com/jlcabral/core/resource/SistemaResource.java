@@ -1,4 +1,4 @@
-package com.jlcabral.csm.resource;
+package com.jlcabral.core.resource;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -7,11 +7,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.jlcabral.core.constant.PathResource;
-import com.jlcabral.core.resource.AppCrudResource;
-import com.jlcabral.csm.dto.SistemaDTO;
-import com.jlcabral.csm.entity.Sistema;
-import com.jlcabral.csm.repository.SistemaRepository;
-import com.jlcabral.csm.service.SistemaService;
+import com.jlcabral.core.dto.SistemaDTO;
+import com.jlcabral.core.entity.Sistema;
+import com.jlcabral.core.repository.SistemaRepository;
+import com.jlcabral.core.service.SistemaService;
 
 @RestController
 @RequestMapping(PathResource.SISTEMAS)
